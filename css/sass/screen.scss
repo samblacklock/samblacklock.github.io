@@ -201,6 +201,12 @@ nav {
     @include subtitle;
 }
 
+
+
+    #MoreInfoButton {
+        display: none;
+    }
+
 @import "simple-box";
 @import "homepage";
 @import "media-queries";
