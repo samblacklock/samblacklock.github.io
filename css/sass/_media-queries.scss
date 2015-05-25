@@ -196,6 +196,8 @@
 
     .introFallback {
         display: block;
-        border-bottom: none;
+        &:before, &:after {
+            display: none;
+        }
     }   
 }
