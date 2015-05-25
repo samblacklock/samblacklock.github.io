@@ -176,3 +176,20 @@
         }
     }
 }
+
+//Target Mozilla
+@-moz-document url-prefix() {
+    .introVideo,
+    #PauseButton {
+        display: none;
+    }
+    .intro {
+        background-image: url(../img/videoFallback.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+
+    .introFallback {
+        display: block;
+    }   
+}
