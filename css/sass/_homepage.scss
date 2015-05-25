@@ -1,0 +1,340 @@
+.intro {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    overflow: hidden;
+    z-index: 3;
+}
+
+.introTextWrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    @include display(flex);
+    @include justify-content(center);
+    @include align-items(center);
+    @include transition(all 0.5s);
+    background: rgba($base, 0.6);
+}
+
+.introText {
+    @include center();
+    text-align: center;
+    min-width: 70%;
+    svg {
+        max-width: 1200px;
+    }
+}
+
+.introFallback {
+    @include superCallout("", "true");
+    display: none;
+    margin: 0 0 0.5em 0;
+}
+
+.introSubtitle {
+    @include subtitle();
+}
+
+.initialWelcome {
+    font-family: 'Playfair Display';
+    font-style: italic;
+    @include emboss;
+}
+
+.established {
+    @include banner;
+}
+
+.introVideo {
+    position: absolute;
+    min-height: 100%;
+    min-width: 100%;
+    left: 50%;
+    @include transform(translateX(-50%));
+    @include filter(blur(5px));
+}
+
+#PauseButton {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    z-index: 3;
+}
+
+.startButton {
+    margin-top: 5%;
+}
+
+.about,
+.welcome,
+.bio,
+.work,
+.contact {
+    min-height: 100vh;
+    width: 100vw;
+    @include display(flex);
+    @include flex-direction(column);
+    @include justify-content(center);
+    @include align-items(center);
+    padding: 5% 0 5% 0;
+}
+
+.welcome {
+    position: relative;
+    &:before {
+        position: absolute;
+        bottom: -30px;
+        content: " ";
+        width: 100%;
+        left: 0;
+        height: 50px;
+        box-shadow: 0 27px 45px -28px $lowlight inset;
+    }
+    &:after {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        @include transform(translateX(-50%));
+        content: " ";
+        border-top: 20px solid $base;
+        border-left: 20px solid transparent;
+        border-right: 20px solid transparent;
+    }
+}
+
+.welcomeTextWrapper {
+    width: 60%;
+    text-align: left;
+}
+
+.welcomeHeading {
+    @include superCallout(7rem, "true", "\f164");
+    text-align: center;
+}
+
+.charm {
+    @include charm;
+}
+
+.aboutHeading {
+    @include superCallout(7rem, "true", "\f040");
+    text-align: center;
+}
+
+.aboutWrapper {
+    width: 70%;
+}
+
+.aboutDetails {
+    @include col(1/3);
+}
+
+.aboutEducation {
+    @include col(2/3);
+}
+
+.factsMoreDiv {
+    font-size: 1.5rem;
+    padding-top: 4.5%;
+    h2 {
+        @include subtitle();
+        text-align: center;
+    font-size: 2.5rem;
+    }
+}
+
+
+.workWrapper {
+    @include center(80%);
+}
+
+.workHeading {
+    @include superCallout(7rem, "true", "\f11c");
+    text-align: center;
+    //left: 50%;
+}
+
+.workSubheading {
+    @include subtitle();
+    text-align: center;
+}
+
+.workEmploymentColumn,
+.workPersonalColumn {
+    @include flex(1);
+    @include col(1/2);
+    position: relative;
+}
+
+
+
+.myWorkButtons {
+    width: 80%;
+}
+
+.workButtonCol {
+    @include col(1/2);
+
+    a {
+        display: block;
+        text-align: center;
+    }
+}
+
+.interests {
+    @include center(80%);
+    padding: 5% 0 5% 0;
+}
+
+.interestsHeading {
+    @include superCallout(7rem, "true", "\f0cb");
+    text-align: center;
+}
+
+.interestsWrapper {
+    @include center(80%);
+    p {
+        text-align: center;
+    }
+}
+
+.chart {
+    width: 100%;
+    height: 80vh;
+    border-top: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-left: 10px solid $lowlight;
+    border-bottom: 10px solid $lowlight;
+    overflow: hidden;
+    .bar {
+        height: 12.5%;
+        @include display(flex);
+        @include align-items(center);
+        @include justify-content(flex-end);
+    }
+    span {
+        @include subtitle;
+        display: block;
+        margin: 0;
+        margin-left: 20px;
+        width: 100%;
+        font-size: 0.9rem;
+    }
+    .cssBar {
+        @include transition(width 1s);
+        @include transition-delay(100ms);
+        width: 0;
+        &.barLoaded {
+            width: 87%;
+            border-bottom: 1px dotted #E44F26;
+        }
+    }
+    .sassBar {
+        @include transition(width 1s);
+        @include transition-delay(200ms);
+        width: 0;
+        &.barLoaded {
+            width: 85%;
+            border-bottom: 1px dotted #BE6E94;
+        }
+    }
+    .bourbonBar {
+        @include transition(width 1s);
+        @include transition-delay(300ms);
+        width: 0;
+        &.barLoaded {
+            width: 83%;
+            border-bottom: 1px dotted #FF812E;
+        }
+    }
+    .jeetBar {
+        @include transition(width 1s);
+        @include transition-delay(400ms);
+        width: 0;
+        &.barLoaded {
+            width: 83%;
+            border-bottom: 1px dotted #09E09C;
+        }
+    }
+    .bootstrapBar {
+        @include transition(width 1s);
+        @include transition-delay(500ms);
+        width: 0;
+        &.barLoaded {
+            width: 70%;
+            border-bottom: 1px dotted #563D7C;
+        }
+    }
+    .jsBar {
+        @include transition(width 1s);
+        @include transition-delay(600ms);
+        width: 0;
+        &.barLoaded {
+            width: 65%;
+            border-bottom: 1px dotted #F7DF1E;
+        }
+    }
+    .angularBar {
+        @include transition(width 1s);
+        @include transition-delay(700ms);
+        width: 0;
+        &.barLoaded {
+            width: 40%;
+            border-bottom: 1px dotted #DD1B16;
+        }
+    }
+    .wordpressBar {
+        @include transition(width 1s);
+        @include transition-delay(800ms);
+        width: 0;
+        &.barLoaded {
+            width: 40%;
+            border-bottom: 1px dotted black;
+        }
+    }
+}
+
+.chartLabels {
+    span {
+        @include span(1/3);
+    }
+    h3 {
+        margin: 0;
+    }
+    .centerLabel {
+        text-align: center;
+        @include subtitle();
+    }
+    .rightLabel {
+        text-align: right;
+    }
+}
+
+.contactHeading {
+    @include superCallout(7rem, "true", "\f095");
+    text-align: center;
+}
+
+.contactMethod {
+    em {
+        font-family: "Lato";
+        font-style: normal;
+        color: $highlight;
+    }
+    .fa {
+        margin-right: 20px;
+        &.fa-circle, &.fa-at {
+            margin-left: 20px;
+            font-size: 0.8rem;
+            vertical-align: middle;
+        }
+    }
+}
+
+.contactMethodInline {
+    margin-top: 50px;
+    a {
+        border-bottom: none;
+    }
+}
