@@ -311,6 +311,10 @@
     }
 }
 
+.contact {
+    height: 100%;
+}
+
 .contactHeading {
     @include superCallout(7rem, "true", "\f095");
     text-align: center;
