@@ -42,6 +42,11 @@ header {
 header h1 {
   color: #FDFDFD;
 }
+@media (max-width: 600px) {
+  header span {
+    display: none;
+  }
+}
 
 section {
   width: 40vw;

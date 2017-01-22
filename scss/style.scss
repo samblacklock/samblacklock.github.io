@@ -32,6 +32,12 @@ header {
   h1 {
     color: #FDFDFD;
   }
+  
+  @media (max-width: 600px) {
+    span {
+      display: none;
+    }
+  }
 }
 
 section {
