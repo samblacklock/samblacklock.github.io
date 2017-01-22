@@ -116,7 +116,7 @@ ul {
     &::before {
       content: '■';
       color: var(--grad2);
-      left: -1rem;
+      left: -1.5rem;
       position: absolute;
     }
   }
@@ -124,4 +124,9 @@ ul {
 
 .employer {
   float: right;
+  
+  @media (max-width: 600px) {
+    float: none;
+    display: block;
+  }
 }

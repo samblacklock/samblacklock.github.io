@@ -132,10 +132,16 @@ ul li {
 ul li::before {
   content: '■';
   color: var(--grad2);
-  left: -1rem;
+  left: -1.5rem;
   position: absolute;
 }
 
 .employer {
   float: right;
+}
+@media (max-width: 600px) {
+  .employer {
+    float: none;
+    display: block;
+  }
 }
