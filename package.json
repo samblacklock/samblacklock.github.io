@@ -1,0 +1,14 @@
+{
+  "name": "samblacklock.github.io",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/samblacklock/samblacklock.github.io",
+  "author": "samblacklock <samblacklock@me.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "node-sass --include-path scss scss/style.scss   css/style.css"
+  },
+  "dependencies": {
+    "node-sass": "^4.5.1"
+  }
+}

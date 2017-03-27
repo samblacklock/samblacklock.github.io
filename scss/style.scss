@@ -22,17 +22,17 @@ h1, h2 {
 
 header {
   background: $gradient;
-  width: 100vw; 
+  width: 100vw;
   min-height: 4rem;
   display: flex;
   color: #FDFDFD;
   justify-content: space-around;
   align-items: center;
-  
+
   h1 {
     color: #FDFDFD;
   }
-  
+
   @media (max-width: 600px) {
     span {
       display: none;
@@ -45,7 +45,7 @@ section {
   position: relative;
   margin-bottom: 1rem;
   padding-bottom: 1rem;
-  
+
   &::after {
     content: '';
     height: 2px;
@@ -56,14 +56,14 @@ section {
     left: 50%;
     transform: translateX(-50%);
   }
-  
+
   &:last-of-type::after {
     display: none;
   }
-  
+
   @media (max-width: 1280px) {
     width: 90vw;
-    
+
     h2 {
       text-align: center;
     }
@@ -80,7 +80,7 @@ section {
   justify-content: space-around;
   align-items: center;
   margin: 0 auto;
-  
+
   .img {
     filter: grayscale(50%);
   }
@@ -108,11 +108,11 @@ dd, dt {
 
 ul {
   list-style-type: none;
-  
+
   li {
     position: relative;
     margin-bottom: 1rem;
-  
+
     &::before {
       content: '■';
       color: var(--grad2);
@@ -124,9 +124,19 @@ ul {
 
 .employer {
   float: right;
-  
+
   @media (max-width: 600px) {
     float: none;
     display: block;
+  }
+}
+
+@media print {
+  html {
+    font-size: 10px;
+  }
+
+  .img {
+    display: none;
   }
 }
