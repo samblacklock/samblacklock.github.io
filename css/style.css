@@ -5,23 +5,23 @@
   --grad2: #924f96; }
 
 body {
-  font-family: Nunito;
-  height: 100vh;
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center; }
+  font-family: Nunito;
+  height: 100vh; }
 
 h1, h2 {
   font-family: Lato; }
 
 header {
+  align-items: center;
   background: linear-gradient(var(--gradAngle), var(--grad1), var(--grad2)) fixed;
-  width: 100vw;
-  min-height: 4rem;
-  display: flex;
   color: #FDFDFD;
+  display: flex;
   justify-content: space-around;
-  align-items: center; }
+  min-height: 4rem;
+  width: 100vw; }
   header h1 {
     color: #FDFDFD; }
   @media (max-width: 600px) {
@@ -29,19 +29,19 @@ header {
       display: none; } }
 
 section {
-  width: 40vw;
-  position: relative;
   margin-bottom: 1rem;
-  padding-bottom: 1rem; }
+  padding-bottom: 1rem;
+  position: relative;
+  width: 40vw; }
   section::after {
+    background: linear-gradient(var(--gradAngle), var(--grad1), var(--grad2)) fixed;
+    bottom: 0;
     content: '';
     height: 2px;
-    width: 25%;
-    background: linear-gradient(var(--gradAngle), var(--grad1), var(--grad2)) fixed;
-    position: absolute;
-    bottom: 0;
     left: 50%;
-    transform: translateX(-50%); }
+    position: absolute;
+    transform: translateX(-50%);
+    width: 25%; }
   section:last-of-type::after {
     display: none; }
   @media (max-width: 1280px) {
@@ -54,20 +54,20 @@ section {
   display: none; }
 
 .bio {
+  align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  align-items: center;
   margin: 0 auto; }
   .bio .img {
     filter: grayscale(50%); }
 
 a {
-  color: #e96544; }
+  color: #e96544 -color; }
 
 dt {
-  float: left;
   clear: both;
+  float: left;
   font-weight: bold;
   margin-bottom: 0.5rem; }
 
@@ -81,8 +81,8 @@ dd, dt {
 ul {
   list-style-type: none; }
   ul li {
-    position: relative;
-    margin-bottom: 1rem; }
+    margin-bottom: 1rem;
+    position: relative; }
     ul li::before {
       content: '■';
       color: var(--grad2);
@@ -93,8 +93,8 @@ ul {
   float: right; }
   @media (max-width: 600px) {
     .employer {
-      float: none;
-      display: block; } }
+      display: block;
+      float: none; } }
 
 @media print {
   html {
